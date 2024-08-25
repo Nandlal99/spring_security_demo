@@ -60,6 +60,8 @@ public class MainController {
             return new ResponseEntity<Object>(map, HttpStatus.NOT_FOUND);
         }
 
+//        jwt security context
+
         SecurityContextHolder.getContext().setAuthentication(authentication);
 
         UserDetails userDetails = (UserDetails) authentication.getPrincipal();
